@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { LocalStorageService } from './storage/local-storage.service';
 
 @Component({
 	selector: 'app-root',
@@ -7,7 +8,7 @@ import { FormBuilder } from '@angular/forms';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	constructor(private _formBuilder: FormBuilder) {}
+	constructor(private _formBuilder: FormBuilder, private _localStorageService: LocalStorageService) {}
 
 	formGroup = this._formBuilder.nonNullable.group({
 		names: [''],
@@ -16,7 +17,12 @@ export class AppComponent {
 
 	formDataInStorage?: IForm;
 
-	clickSend(): void {}
+	clickSend(): void {
+		this._localStorageService.setItem('form', this.formGroup.value);
+
+		const formStorage = this._localStorageService.getItem<IForm>('form');
+		this.formDataInStorage = formStorage!;
+	}
 }
 
 interface IForm {

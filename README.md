@@ -6,6 +6,17 @@
 
 Hola Coder en este proyecto aprenderemos a usar **Local y Session Storage usando las ventajas de TypeScript** ademas aprenderemos a encriptar los datos, sigueme en mis redes y canal para que sigas aprendiendo 🤗
 
+#Librerías
+Usaremos la librería CryptoJS
+
+```
+npm i crypto-js
+```
+
+```
+npm i -D @types/crypto-js
+```
+
 Si les gusta el video compartan y suscribanse.
 
 Pueden escribirme si tiene dudas chikis, gracias por su apoyo.🤗
@@ -13,6 +24,10 @@ Pueden escribirme si tiene dudas chikis, gracias por su apoyo.🤗
 Link del video Local y Sesion Storage
 
 📤https://youtu.be/oM7xXDNj7Oo
+
+Link del video donde implementamos CryptoJS
+
+https://youtu.be/b4amDmpZdJw
 
 Suscríbete a mi canal 😎
 📤https://www.youtube.com/c/LogiDev
